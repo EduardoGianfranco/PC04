@@ -12,6 +12,7 @@ using PC04.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using PC04.Models;
 
 namespace PC04
 {
@@ -35,6 +36,7 @@ namespace PC04
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+            services.AddDbContext<PracticaContext>(dco => dco.UseInMemoryDatabase("PracticaDB"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
