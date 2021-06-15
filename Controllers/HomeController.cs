@@ -23,7 +23,7 @@ namespace PC04.Controllers
         public IActionResult Index()
         {
             var fails = _context.TFail.ToList();
-            return View();
+            return View(fails);
         }
 
         public IActionResult Privacy()

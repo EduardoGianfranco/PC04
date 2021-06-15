@@ -9,10 +9,14 @@ namespace PC04.Models
         public int Id { get; set; }
         [Required]
         public string Titulo { get; set; }
+        public string Foto { get; set; }
         [Required]
         public string Usuario { get; set; }
         public string[] Comentarios { get; set; }
         public DateTime FechaRegistro { get; set;}
 
+        public Fail(){
+            FechaRegistro = DateTime.Now;
+        }
     }
 }
