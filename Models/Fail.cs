@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PC04.Models
 {
@@ -12,6 +13,7 @@ namespace PC04.Models
         public string Foto { get; set; }
         [Required]
         public string Usuario { get; set; }
+        [NotMapped]
         public string[] Comentarios { get; set; }
         public DateTime FechaRegistro { get; set;}
 
